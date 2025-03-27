@@ -1,0 +1,9 @@
+GET: curl http://localhost:3333/produtos
+
+POST: >curl -X POST http://localhost:3333/produtos -H "Content-Type: application/json" -d "{\"name\": \"Produto Exemplo\", \"fornecedor\": \"Fornecedor Exemplo\", \"endereco_fornecedor\": \"São Paulo\", \"quantidade\": 50, \"endereco\": \"Endereço do Produto\", \"preco_unitario\": 15.75}"
+{"message":"Produto adicionado com sucesso!","id":5}
+
+PUT: curl -X PUT http://localhost:3333/produtos/1 -H "Content-Type: application/json" -d "{\"name\": \"Produto Atualizado\", \"fornecedor\": \"Fornecedor Atualizado\", \"endereco_fornecedor\": \"São Paulo\", \"quantidade\": 100, \"endereco\": \"Novo Endereço\", \"preco_unitario\": 20.99}"
+
+DELETE: curl -X DELETE http://localhost:3333/produtos/1
+{"message":"Produto com ID 1 removido com sucesso!"}
